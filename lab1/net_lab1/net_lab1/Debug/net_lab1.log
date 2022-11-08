@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(net_lab1_client.vcxproj, net_lab1_server.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  server.cpp
+A:\_Uni\junior\computer network\lab\lab1\net_lab1\net_lab1\server.cpp(68,30): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  net_lab1.vcxproj -> A:\_Uni\junior\computer network\lab\lab1\net_lab1\Debug\server.exe
