@@ -123,17 +123,17 @@ HTML文档应当使用`<!DOCTYPE html>`开头，并用`</html>`结尾，其中�
 
 最终呈现效果如下：
 
-<img src="Lab2_2011839_刘扬_networking/image-20221027183813915.png" alt="image-20221027183813915" style="zoom:50%;" />
+<img src="Lab2_report/image-20221027183813915.png" alt="image-20221027183813915" style="zoom:50%;" />
 
 由于仅一个html没有搭载js或css的其他库，故在本地该文档会呈现以下效果：
 
-<img src="Lab2_2011839_刘扬_networking/image-20221027185228979.png" alt="image-20221027185228979" style="zoom:33%;" />
+<img src="Lab2_report/image-20221027185228979.png" alt="image-20221027185228979" style="zoom:33%;" />
 
 #### 包含自己的Logo
 
 将logo文件放在/images/目录下，然后使用`href`的超链接来进行包含即可。
 
-<img src="Lab2_2011839_刘扬_networking/image-20221027181716056.png" alt="image-20221027181716056" style="zoom: 50%;" />
+<img src="Lab2_report/image-20221027181716056.png" alt="image-20221027181716056" style="zoom: 50%;" />
 
 ``` html
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon1-32x32-next.png?v=5.1.4">
@@ -142,7 +142,7 @@ HTML文档应当使用`<!DOCTYPE html>`开头，并用`</html>`结尾，其中�
 
 最终可以在网页的bar上呈现效果。
 
-<img src="Lab2_2011839_刘扬_networking/image-20221027182654908.png" alt="image-20221027182654908" style="zoom:50%;" />
+<img src="Lab2_report/image-20221027182654908.png" alt="image-20221027182654908" style="zoom:50%;" />
 
 也可以将logo作为图片插入
 
@@ -167,7 +167,7 @@ HTML文档应当使用`<!DOCTYPE html>`开头，并用`</html>`结尾，其中�
 
 以下截图展现了TCP的三次握手协议：①客户端先向服务器请求建立联系（SYN包），②随后服务器发送SYN和ACK包表示确认建立联系；③之后客户端发送ACK包表示确认建连。随后客户端使用HTTP协议请求从打开`/post/21256fb2.html`这个界面，HTTP的协议版本是1.1 
 
-<img src="Lab2_2011839_刘扬_networking/image-20221029181111799.png" alt="image-20221029181111799" style="zoom:50%;" />
+<img src="Lab2_report/image-20221029181111799.png" alt="image-20221029181111799" style="zoom:50%;" />
 
 以下时序图展现了TCP建立连接中客户端和服务器发送报文、序列号变化的过程，其中x,y都是随机赋值的，但在建立连接的过程中通常为0。
 
@@ -185,7 +185,7 @@ sequenceDiagram
 
 当客户端发送了HTTP协议的`GET`请求之后，可以看到服务器做出了应答：首先是确认；随后发送`PSH`包，打开具体消息可以确认发送的信息即为页面的html文档，并且包含了HTTP协议头`HTTP/1.1 200`，这些信息都被打包到TCP segment中进行发送。
 
-<img src="Lab2_2011839_刘扬_networking/image-20221029181903001.png" alt="image-20221029181903001" style="zoom:50%;" />
+<img src="Lab2_report/image-20221029181903001.png" alt="image-20221029181903001" style="zoom:50%;" />
 
 ``` mermaid
 sequenceDiagram
@@ -208,13 +208,13 @@ sequenceDiagram
 
 客户端请求图片的时候，会先发送一个HTTP协议的`GET`请求，服务器接收到以后就会发送`ACK`并且发送含有图片的数据包；客户端会发送`ACK`，随后服务端会发送一个HTTP协议数据包，返回值为200表明页面可以正常加载。
 
-<img src="Lab2_2011839_刘扬_networking/image-20221029183257783.png" alt="image-20221029183257783" style="zoom:50%;" />
+<img src="Lab2_report/image-20221029183257783.png" alt="image-20221029183257783" style="zoom:50%;" />
 
 ### 3. 四次挥手-断开连接
 
 本过程与课程讲授内容略有区别，基于实验课要求将按照Wireshark捕获的包进行分析而非按照课程讲授的四次挥手过程进行分析。
 
-<img src="Lab2_2011839_刘扬_networking/image-20221029184318720.png" alt="image-20221029184318720" style="zoom:50%;" />
+<img src="Lab2_report/image-20221029184318720.png" alt="image-20221029184318720" style="zoom:50%;" />
 
 关闭请求的时序图如下图所示：
 
